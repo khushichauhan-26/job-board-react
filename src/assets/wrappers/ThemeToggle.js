@@ -1,6 +1,5 @@
-import styled from 'styled-components';
-
-const Wrapper = styled.button`
+ import styled from 'styled-components';
+ const Wrapper = styled.div`
   background: transparent;
   border-color: transparent;
   width: 3.5rem;
@@ -12,5 +11,6 @@ const Wrapper = styled.button`
     font-size: 1.15rem;
     color: var(--text-color);
   }
-`;
-export default Wrapper;
+ `;
+ export default Wrapper;
+ 

@@ -36,10 +36,15 @@
   nav {
     width: var(--fluid-width);
     max-width: var(--max-width);
-    margin: 0 auto;
+    // margin: 0 auto;
     height: var(--nav-height);
     display: flex;
     align-items: center;
+  }
+  .logo {
+    width: 260px;
+    height: auto;
+    // margin-left: 1rem;
   }
   .page {
     min-height: calc(100vh - var(--nav-height));

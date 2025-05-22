@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-
-const Wrapper = styled.aside`
+ const Wrapper = styled.aside`
   display: none;
   @media (min-width: 992px) {
     display: block;
@@ -54,9 +53,7 @@ const Wrapper = styled.aside`
     .active {
       color: var(--primary-500);
     }
-    .pending {
-      background: var(--background-color);
-    }
   }
-`;
-export default Wrapper;
+ `;
+ export default Wrapper;
+ 

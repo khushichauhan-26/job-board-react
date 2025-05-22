@@ -1,38 +1,20 @@
-
-import './App.css'
-import Navbar from './components/Navbar';
-
-// const App = () => {
-  
-//   return (
-//      <div><Navbar />
-//      <h1>Jobify App</h1>
-//      </div>
-//   )
-  
-// };
-// export default App;
-
-
-
-
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
- import {
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
   HomeLayout,
   Landing,
   Register,
   Login,
   DashboardLayout,
-  Error,
-  AddJob,
-  AllJobs,
-  Profile,
-  Admin,
-  Stats
- } from './pages';
- const router = createBrowserRouter([
+  Error
+//   AddJob,
+//   AllJobs,
+//   Profile,
+//   Admin,
+//   Stats,
+} from "./pages";
+const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <HomeLayout />,
     errorElement: <Error />,
     children: [
@@ -41,48 +23,47 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
         element: <Landing />,
       },
       {
-        path: 'register',
+        path: "register",
         element: <Register />,
       },
       {
-        path: 'login',
+        path: "login",
         element: <Login />,
       },
       {
-        path: 'dashboard',
-        element: <DashboardLayout />,
-        children: [
-          {
-            index: true,
-            element: <AddJob />,
-          },
-          { path: 'stats', element: <Stats /> },
-          {
-            path: 'all-jobs',
-            element: <AllJobs />,
-          },
-          {
-            path: 'profile',
-            element: <Profile />,
-          },
-          {
-            path: 'admin',
-            element: <Admin />,
-          },
-        ],
-      },
-    ],
-  },
- ]);
- const App = () => {
-  // return <RouterProvider router={router} />;
-  return (
-    
-    <div>
-      <RouterProvider router={router} />
-      <Navbar />
-      <h1>Jobify App</h1>
-    </div>
-  )
- };
- export default App;
+        path: "dashboard",
+        element: <DashboardLayout />
+        // children: [
+        //   {
+        //     index: true,
+        //     element: <AddJob />,
+        //   },
+        //   { path: "stats", element: <Stats /> },
+        //   {
+        //     path: "all-jobs",
+        //     element: <AllJobs />,
+        //   },
+        //   {
+        //     path: "profile",
+        //     element: <Profile />,
+        //   },
+        //   {
+        //     path: "admin",
+        //     element: <Admin />,
+        //   },
+        // ],
+      }
+    ]
+  }
+]);
+const App = () => {
+  return <RouterProvider router={router} />;
+};
+export default App;
+
+// const checkDefaultTheme = () => {
+//  const isDarkTheme = localStorage.getItem('darkTheme') === 'true';
+//  document.body.classList.toggle('dark-theme', isDarkTheme);
+//  return isDarkTheme;
+//  };
+//  const isDarkThemeEnabled = checkDefaultTheme();

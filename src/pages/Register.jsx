@@ -1,15 +1,4 @@
-// // Register.jsx
-//  import { Link } from 'react-router-dom';
-//  const Register = () => {
-//   return (
-//     <div>
-//       <h1>Register</h1>
-//       <Link to='/login'>Login Page</Link>
-//     </div>
-//   );
-//  };
-//  export default Register;
-
+import React from 'react';
  import { Logo, FormRow } from '../components';
  import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
  import { Link } from 'react-router-dom';
