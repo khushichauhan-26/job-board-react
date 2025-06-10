@@ -6,7 +6,7 @@ import { DashboardContext } from './dashboardContext'; // <-- import context
 
 const Dashboard = ({ isDarkThemeEnabled }) => {
   // temp
-  const user = { name: 'Aadi' };
+  const user = { name: 'Khushi' };
   const [showSidebar, setShowSidebar] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = useState(isDarkThemeEnabled);
   const toggleDarkTheme = () => {
